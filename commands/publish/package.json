@@ -1,0 +1,35 @@
+{
+  "name": "@code-robot-cli/publish",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "徐聪 <admin@example.com>",
+  "homepage": "https://github.com/myAotuBest/code-robot-cli#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npm.taobao.org"
+  },
+  "dependencies": {
+    "@code-robot-cli/command": "file:../../models/command",
+    "@code-robot-cli/log": "file:../../utils/log",
+    "@code-robot-cli/git": "file:../../models/git",
+    "fs-extra": "^10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myAotuBest/code-robot-cli.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/myAotuBest/code-robot-cli/issues"
+  }
+}

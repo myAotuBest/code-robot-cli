@@ -1,0 +1,38 @@
+{
+  "name": "@code-robot-cli/package",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "徐聪 <753428092@qq.com>",
+  "homepage": "https://github.com/myAotuBest/code-robot-cli#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myAotuBest/code-robot-cli.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/myAotuBest/code-robot-cli/issues"
+  },
+  "dependencies": {
+    "@code-robot-cli/format-path": "file:../../utils/format-path",
+    "@code-robot-cli/get-npm-info": "file:../../utils/get-npm-info",
+    "@code-robot-cli/utils": "file:../../utils/utils",
+    "fs-extra": "^7.0.1",
+    "npminstall": "^4.10.0",
+    "path-exists": "^4.0.0",
+    "pkg-dir": "^5.0.0"
+  }
+}

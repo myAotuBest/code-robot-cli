@@ -1,0 +1,45 @@
+{
+  "name": "@code-robot-cli/core",
+  "version": "1.0.0",
+  "description": "roy-cli-dev core",
+  "author": "徐聪 <753428092@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "",
+  "bin": {
+    "code-robot-cli": "bin/index.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Run testing from core\""
+  },
+  "dependencies": {
+    "@code-robot-cli/exec": "file:../exec",
+    "@code-robot-cli/get-npm-info": "file:../../utils/get-npm-info",
+    "@code-robot-cli/init": "file:../../commands/init",
+    "@code-robot-cli/log": "file:../../utils/log",
+    "colors": "^1.4.0",
+    "commander": "^6.2.1",
+    "dotenv": "^8.2.0",
+    "import-local": "^3.0.2",
+    "minimist": "^1.2.5",
+    "npmlog": "^4.1.2",
+    "path-exists": "^4.0.0",
+    "root-check": "^1.0.0",
+    "semver": "^7.3.4",
+    "user-home": "^2.0.0"
+  },
+  "gitHead": "b72dc12bab066a882d8a822c1bffedc34e08fa0f",
+  "devDependencies": {
+    "npmlog": "^4.1.2"
+  }
+}
