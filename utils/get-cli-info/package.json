@@ -14,7 +14,8 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
+    "registry": "http://registry.npmjs.org/",
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,5 @@
     "semver": "^7.3.4",
     "url-join": "^4.0.1"
   },
-  "gitHead": "83f41d256dbe8c52a1d60f3ffc0688fffeab07ef"
+  "gitHead": "986412305d8dfede52d48b86760050340208c4e9"
 }
