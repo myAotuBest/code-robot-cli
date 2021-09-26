@@ -5,7 +5,7 @@
  * @Github: @163.com
  * @Date: 2021-02-23 20:34:11
  * @LastEditors: Roy
- * @LastEditTime: 2021-09-26 15:19:54
+ * @LastEditTime: 2021-09-26 15:45:13
  * @Deprecated: 否
  * @FilePath: /code-robot-cli/core/cli/lib/index.js
  */
@@ -119,7 +119,7 @@ async function checkGlobalUpdate() {
     const currentVersion = pkg.version;
     const npmName = pkg.name;
     //2.调用npm API,获取所有版本号
-    const { getNpmSemverVersion } = require('../../../utils/get-cli-info/lib');
+    const { getNpmSemverVersion } = require('@code-robot-cli/get-cli-info');
     //3.提取所有版本号，比对哪些版本号是大于当前版本号
     const lastVersion = await getNpmSemverVersion(currentVersion, npmName);
     if (lastVersion && semver.gt(lastVersion, currentVersion)) {

@@ -5,7 +5,7 @@
  * @Github: @163.com
  * @Date: 2021-03-04 20:08:57
  * @LastEditors: Roy
- * @LastEditTime: 2021-09-26 15:24:12
+ * @LastEditTime: 2021-09-26 15:44:42
  * @Deprecated: 否
  * @FilePath: /code-robot-cli/models/package/lib/index.js
  */
@@ -18,7 +18,7 @@ const npminstall = require('npminstall');
 const pathExists = require('path-exists').sync;
 const { isObject } = require('@code-robot-cli/utils');
 const formatPath = require('@code-robot-cli/format-path');
-const { getDefaultRegistry, getNpmLatestVersion } = require('../../../utils/get-cli-info/lib');
+const { getDefaultRegistry, getNpmLatestVersion } = require('@code-robot-cli/get-cli-info');
 
 class Package {
     constructor(options) {
