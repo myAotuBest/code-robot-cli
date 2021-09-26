@@ -27,13 +27,13 @@
     "url": "https://github.com/myAotuBest/code-robot-cli/issues"
   },
   "dependencies": {
-    "@code-robot-cli/format-path": "file:../../utils/format-path",
+    "@code-robot-cli/format-path": "^1.0.1",
     "@code-robot-cli/get-cli-info": "file:../../utils/get-cli-info",
-    "@code-robot-cli/utils": "file:../../utils/utils",
+    "@code-robot-cli/utils": "^1.0.1",
     "fs-extra": "^7.0.1",
     "npminstall": "^4.10.0",
     "path-exists": "^4.0.0",
     "pkg-dir": "^5.0.0"
   },
-  "gitHead": "1aee0325d093a8979c53fc7897ea23c38e189b82"
+  "gitHead": "83f41d256dbe8c52a1d60f3ffc0688fffeab07ef"
 }
