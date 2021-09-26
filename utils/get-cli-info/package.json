@@ -1,7 +1,7 @@
 {
-  "name": "get-npm-info",
+  "name": "get-cli-info",
   "version": "1.0.1",
-  "description": "get npm info ",
+  "description": "get cli info ",
   "author": "徐聪 <753428092@qq.com>",
   "homepage": "https://github.com/myAotuBest/code-robot-cli#readme",
   "license": "ISC",
@@ -31,5 +31,5 @@
     "semver": "^7.3.4",
     "url-join": "^4.0.1"
   },
-  "gitHead": "1e439afa10c213c9fbabe2a0dd3c383dafffb271"
+  "gitHead": "1aee0325d093a8979c53fc7897ea23c38e189b82"
 }
