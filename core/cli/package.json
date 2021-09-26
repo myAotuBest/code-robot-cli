@@ -23,10 +23,10 @@
     "test": "echo \"Run testing from core\""
   },
   "dependencies": {
-    "@code-robot-cli/exec": "file:../exec",
+    "@code-robot-cli/exec": "^1.0.1",
     "@code-robot-cli/get-npm-info": "file:../../utils/get-npm-info",
-    "@code-robot-cli/init": "file:../../commands/init",
-    "@code-robot-cli/log": "file:../../utils/log",
+    "@code-robot-cli/init": "^1.0.1",
+    "@code-robot-cli/log": "^1.0.1",
     "colors": "^1.4.0",
     "commander": "^6.2.1",
     "dotenv": "^8.2.0",
@@ -38,7 +38,7 @@
     "semver": "^7.3.4",
     "user-home": "^2.0.0"
   },
-  "gitHead": "b72dc12bab066a882d8a822c1bffedc34e08fa0f",
+  "gitHead": "1e439afa10c213c9fbabe2a0dd3c383dafffb271",
   "devDependencies": {
     "npmlog": "^4.1.2"
   }

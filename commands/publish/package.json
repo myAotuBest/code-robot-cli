@@ -17,9 +17,9 @@
     "registry": "http://registry.npm.taobao.org"
   },
   "dependencies": {
-    "@code-robot-cli/command": "file:../../models/command",
-    "@code-robot-cli/git": "file:../../models/git",
-    "@code-robot-cli/log": "file:../../utils/log",
+    "@code-robot-cli/command": "^1.0.1",
+    "@code-robot-cli/git": "^1.0.1",
+    "@code-robot-cli/log": "^1.0.1",
     "fs-extra": "^10.0.0"
   },
   "repository": {
@@ -31,5 +31,6 @@
   },
   "bugs": {
     "url": "https://github.com/myAotuBest/code-robot-cli/issues"
-  }
+  },
+  "gitHead": "1e439afa10c213c9fbabe2a0dd3c383dafffb271"
 }

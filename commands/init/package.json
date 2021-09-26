@@ -27,11 +27,11 @@
     "url": "https://github.com/myAotuBest/code-robot-cli/issues"
   },
   "dependencies": {
-    "@code-robot-cli/command": "file:../../models/command",
-    "@code-robot-cli/log": "file:../../utils/log",
-    "@code-robot-cli/package": "file:../../models/package",
-    "@code-robot-cli/request": "file:../../utils/request",
-    "@code-robot-cli/utils": "file:../../utils/utils",
+    "@code-robot-cli/command": "^1.0.1",
+    "@code-robot-cli/log": "^1.0.1",
+    "@code-robot-cli/package": "^1.0.1",
+    "@code-robot-cli/request": "^1.0.1",
+    "@code-robot-cli/utils": "^1.0.1",
     "ejs": "^3.1.6",
     "fs-extra": "^9.1.0",
     "glob": "^7.1.6",
@@ -39,5 +39,6 @@
     "kebab-case": "^1.0.1",
     "semver": "^7.3.4",
     "user-home": "^2.0.0"
-  }
+  },
+  "gitHead": "1e439afa10c213c9fbabe2a0dd3c383dafffb271"
 }
