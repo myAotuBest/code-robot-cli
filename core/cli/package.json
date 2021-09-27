@@ -39,7 +39,7 @@
     "semver": "^7.3.4",
     "user-home": "^2.0.0"
   },
-  "gitHead": "f0f07a9775c1aa7d510f6abc8ad2a3ef511f5866",
+  "gitHead": "c15752e6ba554577ecb2e48d3947c2b7d55c7afc",
   "devDependencies": {
     "npmlog": "^4.1.2"
   }

@@ -1,5 +1,5 @@
 {
-  "name": "get-cli-info",
+  "name": "@code-robot-cli/get-cli-info",
   "version": "1.0.1",
   "description": "get cli info ",
   "author": "徐聪 <753428092@qq.com>",
@@ -32,5 +32,5 @@
     "semver": "^7.3.4",
     "url-join": "^4.0.1"
   },
-  "gitHead": "f0f07a9775c1aa7d510f6abc8ad2a3ef511f5866"
+  "gitHead": "c15752e6ba554577ecb2e48d3947c2b7d55c7afc"
 }
