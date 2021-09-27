@@ -14,7 +14,7 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "http://registry.npm.taobao.org",
+    "registry": "http://registry.npmjs.org/",
     "access": "public"
   },
   "dependencies": {
@@ -33,5 +33,5 @@
   "bugs": {
     "url": "https://github.com/myAotuBest/code-robot-cli/issues"
   },
-  "gitHead": "0b0abce1f1fa6dd8a4042cea3a787c49540c173c"
+  "gitHead": "f0f07a9775c1aa7d510f6abc8ad2a3ef511f5866"
 }
