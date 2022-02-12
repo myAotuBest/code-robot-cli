@@ -1,14 +1,3 @@
-/*
- * @message: 描述
- * @Author: Roy
- * @Email: @163.com
- * @Github: @163.com
- * @Date: 2021-07-10 16:02:46
- * @LastEditors: Roy
- * @LastEditTime: 2021-09-07 22:14:30
- * @Deprecated: 否
- * @FilePath: /roy-cli-dev/models/cloudbuild/lib/index.js
- */
 'use strict';
 
 const io = require('socket.io-client');
@@ -40,7 +29,6 @@ function parseMsg(msg) {
         message,
     };
 }
-
 
 class CloundBuild {
     constructor(git, options) {

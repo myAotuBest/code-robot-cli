@@ -1,14 +1,3 @@
-/*
- * @message: 描述
- * @Author: Roy
- * @Email: @163.com
- * @Github: @163.com
- * @Date: 2021-03-09 22:33:06
- * @LastEditors: Roy
- * @LastEditTime: 2021-09-07 22:14:35
- * @Deprecated: 否
- * @FilePath: /roy-cli-dev/utils/request/lib/index.js
- */
 'use strict';
 
 const axios = require('axios');

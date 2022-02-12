@@ -1,14 +1,3 @@
-/*
- * @message: 描述
- * @Author: Roy
- * @Email: @163.com
- * @Github: @163.com
- * @Date: 2021-02-23 20:34:11
- * @LastEditors: Roy
- * @LastEditTime: 2021-09-26 15:45:13
- * @Deprecated: 否
- * @FilePath: /code-robot-cli/core/cli/lib/index.js
- */
 'use strict';
 
 module.exports = core;
