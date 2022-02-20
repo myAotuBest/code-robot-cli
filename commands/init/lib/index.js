@@ -87,11 +87,13 @@ class InitCommand extends Command {
                 throw new Error('命令不存在!命令:' + command);
             }
             const args = cmdArray.slice(1);
+            console.log(cmd);
             ret = await execAsync(cmd, args, {
                 stdio: 'inherit',
                 cwd: process.cwd(),
             })
         }
+        console.log('ret:', ret);
         if (ret !== 0) {
             throw new Error(errMsg)
         }
@@ -135,9 +137,9 @@ class InitCommand extends Command {
         //拷贝模板代码直当前目录
         let spinner = spinnerStart('正在安装模板');
         log.verbose('templateNpm', this.templateNpm)
+        const targetPath = process.cwd();
         try {
             const templatePath = path.resolve(this.templateNpm.cachFilePath, 'template');
-            const targetPath = process.cwd();
             fse.ensureDirSync(templatePath);//确保当前文件存不存在，不存在会创建
             fse.ensureDirSync(targetPath);
             fse.copySync(templatePath, targetPath);//把缓存目录下的模板拷贝到当前目录
