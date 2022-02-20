@@ -1,6 +1,6 @@
 {
   "name": "@code-robot-cli/git",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "> TODO: description",
   "author": "徐聪 <admin@example.com>",
   "homepage": "https://github.com/myAotuBest/code-robot-cli#readme",
@@ -28,7 +28,7 @@
     "url": "https://github.com/myAotuBest/code-robot-cli/issues"
   },
   "dependencies": {
-    "@code-robot-cli/cloudbuild": "^1.0.2",
+    "@code-robot-cli/cloudbuild": "^1.0.1",
     "@code-robot-cli/log": "^1.0.1",
     "@code-robot-cli/request": "^1.0.1",
     "@code-robot-cli/utils": "^1.0.2",
@@ -46,5 +46,5 @@
     "mocha": "^9.1.1",
     "should": "^13.2.3"
   },
-  "gitHead": "4a0684e9ecdf1f02944c30fbdb1e94985b37866b"
+  "gitHead": "213c49c3d37b57bd98a2a76bdd94aaf1dac47dad"
 }
