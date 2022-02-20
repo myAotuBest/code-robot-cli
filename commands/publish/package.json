@@ -1,6 +1,6 @@
 {
   "name": "@code-robot-cli/publish",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "> TODO: description",
   "author": "徐聪 <admin@example.com>",
   "homepage": "https://github.com/myAotuBest/code-robot-cli#readme",
@@ -18,9 +18,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@code-robot-cli/command": "^1.0.1",
-    "@code-robot-cli/git": "^1.0.1",
-    "@code-robot-cli/log": "^1.0.1",
+    "@code-robot-cli/command": "^1.0.2",
+    "@code-robot-cli/git": "^1.0.2",
+    "@code-robot-cli/log": "^1.0.2",
     "fs-extra": "^10.0.0"
   },
   "repository": {

@@ -1,6 +1,6 @@
 {
   "name": "@code-robot-cli/exec",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "roy-cli-dev exec",
   "author": "徐聪 <753428092@qq.com>",
   "homepage": "https://github.com/myAotuBest/code-robot-cli#readme",
@@ -28,9 +28,9 @@
     "url": "https://github.com/myAotuBest/code-robot-cli/issues"
   },
   "dependencies": {
-    "@code-robot-cli/log": "^1.0.1",
-    "@code-robot-cli/package": "^1.0.1",
-    "@code-robot-cli/utils": "^1.0.1"
+    "@code-robot-cli/log": "^1.0.2",
+    "@code-robot-cli/package": "^1.0.2",
+    "@code-robot-cli/utils": "^1.0.2"
   },
   "gitHead": "f0f07a9775c1aa7d510f6abc8ad2a3ef511f5866"
 }

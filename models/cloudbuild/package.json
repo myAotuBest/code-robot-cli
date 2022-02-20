@@ -1,6 +1,6 @@
 {
   "name": "@code-robot-cli/cloudbuild",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "> TODO: description",
   "author": "徐聪 <admin@example.com>",
   "homepage": "https://github.com/myAotuBest/code-robot-cli#readme",
@@ -28,8 +28,8 @@
     "url": "https://github.com/myAotuBest/code-robot-cli/issues"
   },
   "dependencies": {
-    "@code-robot-cli/log": "^1.0.1",
-    "@code-robot-cli/request": "^1.0.1",
+    "@code-robot-cli/log": "^1.0.2",
+    "@code-robot-cli/request": "^1.0.2",
     "inquirer": "^8.1.1",
     "lodash": "^4.17.21",
     "socket.io-client": "^2.0.0"
