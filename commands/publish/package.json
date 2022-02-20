@@ -20,7 +20,7 @@
   "dependencies": {
     "@code-robot-cli/command": "^1.0.2",
     "@code-robot-cli/git": "^1.0.2",
-    "@code-robot-cli/log": "^1.0.2",
+    "@code-robot-cli/log": "^1.0.1",
     "fs-extra": "^10.0.0"
   },
   "repository": {
@@ -33,5 +33,5 @@
   "bugs": {
     "url": "https://github.com/myAotuBest/code-robot-cli/issues"
   },
-  "gitHead": "60b6724582d9d2216a9cb7ad91947a8b2eed3c17"
+  "gitHead": "ca49f0e85aabe40a10a2a8dd6c13b0fd1da93b8c"
 }
