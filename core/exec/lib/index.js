@@ -1,3 +1,4 @@
+
 /*
  * @message: 描述
  * @Author: Roy
@@ -5,12 +6,11 @@
  * @Github: @163.com
  * @Date: 2021-03-04 18:25:02
  * @LastEditors: Roy
- * @LastEditTime: 2022-02-12 17:15:15
+ * @LastEditTime: 2022-02-20 16:19:15
  * @Deprecated: 否
  * @FilePath: /code-robot-cli/core/exec/lib/index.js
  */
 'use strict';
-
 
 const path = require('path');
 const Package = require('@code-robot-cli/package');

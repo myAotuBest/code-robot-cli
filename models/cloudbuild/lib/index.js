@@ -1,3 +1,4 @@
+
 /*
  * @message: 描述
  * @Author: Roy
@@ -5,7 +6,7 @@
  * @Github: @163.com
  * @Date: 2021-07-10 16:02:46
  * @LastEditors: Roy
- * @LastEditTime: 2022-02-12 17:36:55
+ * @LastEditTime: 2022-02-20 16:19:29
  * @Deprecated: 否
  * @FilePath: /code-robot-cli/models/cloudbuild/lib/index.js
  */
@@ -42,7 +43,6 @@ function parseMsg(msg) {
         message,
     };
 }
-
 
 class CloundBuild {
     constructor(git, options) {

@@ -1,14 +1,3 @@
-/*
- * @message: 描述
- * @Author: Roy
- * @Email: @163.com
- * @Github: @163.com
- * @Date: 2021-07-01 21:44:09
- * @LastEditors: Roy
- * @LastEditTime: 2021-09-07 22:05:53
- * @Deprecated: 否
- * @FilePath: /roy-cli-dev/models/git/lib/index.js
- */
 'use strict';
 const path = require('path');
 const userHome = require('user-home');
