@@ -1,6 +1,6 @@
 {
   "name": "@code-robot-cli/format-path",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "roy-cli-dev format-path",
   "author": "徐聪 <753428092@qq.com>",
   "homepage": "https://github.com/myAotuBest/code-robot-cli#readme",
@@ -27,5 +27,5 @@
   "bugs": {
     "url": "https://github.com/myAotuBest/code-robot-cli/issues"
   },
-  "gitHead": "32bbbd66b24df964ef8c1ef7dd46dab803a88777"
+  "gitHead": "c3b3cdf582c936ccf622e29fb91e2673d6afe1e9"
 }
