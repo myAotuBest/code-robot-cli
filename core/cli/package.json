@@ -1,6 +1,6 @@
 {
   "name": "@code-robot-cli/core",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "roy-cli-dev core",
   "author": "徐聪 <753428092@qq.com>",
   "homepage": "",
@@ -24,9 +24,9 @@
     "test": "echo \"Run testing from core\""
   },
   "dependencies": {
-    "@code-robot-cli/exec": "^1.0.2",
+    "@code-robot-cli/exec": "^1.0.1",
     "@code-robot-cli/get-cli-info": "^1.0.1",
-    "@code-robot-cli/init": "^1.0.2",
+    "@code-robot-cli/init": "^1.0.1",
     "@code-robot-cli/log": "^1.0.1",
     "colors": "^1.4.0",
     "commander": "^6.2.1",

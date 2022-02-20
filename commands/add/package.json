@@ -27,7 +27,7 @@
     "url": "https://github.com/myAotuBest/code-robot-cli/issues"
   },
   "dependencies": {
-    "@code-robot-cli/command": "^1.0.2",
+    "@code-robot-cli/command": "^1.0.1",
     "@code-robot-cli/log": "^1.0.1",
     "@code-robot-cli/package": "^1.0.1",
     "@code-robot-cli/utils": "^1.0.2",
