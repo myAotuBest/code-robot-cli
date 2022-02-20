@@ -1,6 +1,6 @@
 {
   "name": "@code-robot-cli/get-cli-info",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "get cli info ",
   "author": "徐聪 <753428092@qq.com>",
   "homepage": "https://github.com/myAotuBest/code-robot-cli#readme",
@@ -32,5 +32,5 @@
     "semver": "^7.3.4",
     "url-join": "^4.0.1"
   },
-  "gitHead": "c3b3cdf582c936ccf622e29fb91e2673d6afe1e9"
+  "gitHead": "73bb0324890df4999a5ee574cbe1ba76aa8ba455"
 }

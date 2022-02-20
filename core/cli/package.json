@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@code-robot-cli/exec": "^1.0.2",
-    "@code-robot-cli/get-cli-info": "^1.0.2",
+    "@code-robot-cli/get-cli-info": "^1.0.1",
     "@code-robot-cli/init": "^1.0.2",
     "@code-robot-cli/log": "^1.0.2",
     "colors": "^1.4.0",
@@ -39,7 +39,7 @@
     "semver": "^7.3.4",
     "user-home": "^2.0.0"
   },
-  "gitHead": "c3b3cdf582c936ccf622e29fb91e2673d6afe1e9",
+  "gitHead": "73bb0324890df4999a5ee574cbe1ba76aa8ba455",
   "devDependencies": {
     "npmlog": "^4.1.2"
   }

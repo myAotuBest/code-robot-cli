@@ -29,12 +29,12 @@
   },
   "dependencies": {
     "@code-robot-cli/format-path": "^1.0.1",
-    "@code-robot-cli/get-cli-info": "^1.0.2",
+    "@code-robot-cli/get-cli-info": "^1.0.1",
     "@code-robot-cli/utils": "^1.0.2",
     "fs-extra": "^7.0.1",
     "npminstall": "^4.10.0",
     "path-exists": "^4.0.0",
     "pkg-dir": "^5.0.0"
   },
-  "gitHead": "c3b3cdf582c936ccf622e29fb91e2673d6afe1e9"
+  "gitHead": "73bb0324890df4999a5ee574cbe1ba76aa8ba455"
 }
