@@ -5,9 +5,9 @@
  * @Github: @163.com
  * @Date: 2021-07-10 16:02:46
  * @LastEditors: Roy
- * @LastEditTime: 2021-09-07 22:14:30
+ * @LastEditTime: 2022-02-12 17:36:55
  * @Deprecated: 否
- * @FilePath: /roy-cli-dev/models/cloudbuild/lib/index.js
+ * @FilePath: /code-robot-cli/models/cloudbuild/lib/index.js
  */
 'use strict';
 
@@ -19,7 +19,9 @@ const inquirer = require('inquirer');
 
 const TIME_OUT = 5 * 60 * 1000;
 const CONNECT_TIME_OUT = 5 * 1000;
-const WS_SERVER = 'http://127.0.0.1:7001';
+// const WS_SERVER = 'http://127.0.0.1:7001';
+const WS_SERVER = 'http://115.28.139.70:7003';
+
 // const socket = require('socket.io-client')('http://127.0.0.1:7001');
 // socket.on('connect', () => {
 //     console.log('connect!');

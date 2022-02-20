@@ -5,9 +5,9 @@
  * @Github: @163.com
  * @Date: 2021-03-04 18:25:02
  * @LastEditors: Roy
- * @LastEditTime: 2021-06-27 20:11:32
+ * @LastEditTime: 2022-02-12 17:15:15
  * @Deprecated: 否
- * @FilePath: /roy-cli-dev/core/exec/lib/index.js
+ * @FilePath: /code-robot-cli/core/exec/lib/index.js
  */
 'use strict';
 
@@ -20,6 +20,7 @@ const { exec: spawn } = require('@code-robot-cli/utils');
 const SETTINGS = {
     init: "@code-robot-cli/init",
     publish: "@code-robot-cli/publish",
+    add: "@code-robot-cli/add",
 }
 
 const CACHE_DIR = 'dependencies/';

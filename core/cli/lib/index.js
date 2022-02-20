@@ -5,7 +5,7 @@
  * @Github: @163.com
  * @Date: 2021-02-23 20:34:11
  * @LastEditors: Roy
- * @LastEditTime: 2021-09-26 15:45:13
+ * @LastEditTime: 2022-02-12 17:45:57
  * @Deprecated: 否
  * @FilePath: /code-robot-cli/core/cli/lib/index.js
  */
@@ -67,7 +67,10 @@ function registerCommand() {
         .command('init [projectName]')
         .option('-f, --force', '是否强制初始化项目')
         .action(exec);
-
+    program
+        .command('add [templateName]')
+        .option('-n, --templateName', '复用代码名称')
+        .action(exec);
     program
         .command('publish')
         .option('--refreshServer', '强制更新Git远程仓库')

@@ -5,15 +5,15 @@
  * @Github: @163.com
  * @Date: 2021-03-09 22:33:06
  * @LastEditors: Roy
- * @LastEditTime: 2021-09-07 22:14:35
+ * @LastEditTime: 2022-02-12 17:38:19
  * @Deprecated: 否
- * @FilePath: /roy-cli-dev/utils/request/lib/index.js
+ * @FilePath: /code-robot-cli/utils/request/lib/index.js
  */
 'use strict';
 
 const axios = require('axios');
 
-const BASE_URL = process.env.ROY_CLI_BASE_URL ? process.env.ROY_CLI_BASE_URL : "http://127.0.0.1:7001/";
+const BASE_URL = process.env.ROY_CLI_BASE_URL ? process.env.ROY_CLI_BASE_URL : "http://115.28.139.70:7003/";
 
 const request = axios.create({
     baseURL: BASE_URL,
