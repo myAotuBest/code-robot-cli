@@ -1,14 +1,3 @@
-/*
- * @message: 描述
- * @Author: Roy
- * @Email: cx_love_xc@163.com
- * @Github: cx_love_xc@163.com
- * @Date: 2022-02-12 16:32:58
- * @LastEditors: Roy
- * @LastEditTime: 2022-02-20 15:36:42
- * @Deprecated: 否
- * @FilePath: /code-robot-cli/commands/add/lib/index.js
- */
 'use strict';
 const path = require('path');
 const userHome = require('user-home');
@@ -114,6 +103,7 @@ class AddCommand extends Command {
             });
         });
     }
+    // 依赖合并
     async dependenciesMerge(options) {
         function objToArray(o) {
             const arr = [];
