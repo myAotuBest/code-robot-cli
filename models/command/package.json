@@ -1,6 +1,6 @@
 {
   "name": "@code-robot-cli/command",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "roy-cli-dev command",
   "author": "徐聪 <753428092@qq.com>",
   "homepage": "https://github.com/myAotuBest/code-robot-cli#readme",
@@ -28,7 +28,7 @@
     "url": "https://github.com/myAotuBest/code-robot-cli/issues"
   },
   "dependencies": {
-    "@code-robot-cli/log": "^1.0.1",
+    "@code-robot-cli/log": "^1.0.3",
     "colors": "^1.4.0",
     "semver": "^7.3.4"
   },

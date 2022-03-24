@@ -1,6 +1,6 @@
 {
   "name": "@code-robot-cli/add",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "code-robot-cli add",
   "author": "徐聪 <753428092@qq.com>",
   "homepage": "https://github.com/myAotuBest/code-robot-cli#readme",
@@ -27,10 +27,10 @@
     "url": "https://github.com/myAotuBest/code-robot-cli/issues"
   },
   "dependencies": {
-    "@code-robot-cli/command": "^1.0.1",
-    "@code-robot-cli/log": "^1.0.1",
-    "@code-robot-cli/package": "^1.0.1",
-    "@code-robot-cli/utils": "^1.0.2",
+    "@code-robot-cli/command": "^1.0.3",
+    "@code-robot-cli/log": "^1.0.3",
+    "@code-robot-cli/package": "^1.0.3",
+    "@code-robot-cli/utils": "^1.0.3",
     "ejs": "^3.1.6",
     "fs-extra": "^10.0.0",
     "glob": "^7.2.0",
