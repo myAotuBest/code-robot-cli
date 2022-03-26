@@ -24,13 +24,13 @@
     "test": "echo \"Run testing from core\""
   },
   "dependencies": {
-    "@code-robot-cli/exec": "^1.0.3",
-    "@code-robot-cli/get-cli-info": "^1.0.3",
-    "@code-robot-cli/init": "^1.0.3",
-    "@code-robot-cli/log": "^1.0.3",
+    "@code-robot-cli/exec": "file:../exec",
+    "@code-robot-cli/get-cli-info": "file:../../utils/get-cli-info",
+    "@code-robot-cli/log": "file:../../utils/log",
     "colors": "^1.4.0",
     "commander": "^6.2.1",
     "dotenv": "^8.2.0",
+    "figlet": "^1.5.2",
     "import-local": "^3.0.2",
     "minimist": "^1.2.5",
     "npmlog": "^4.1.2",
