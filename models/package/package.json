@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@code-robot-cli/format-path": "^1.0.3",
-    "@code-robot-cli/get-cli-info": "^1.0.3",
+    "@code-robot-cli/get-cli-info": "file:../../utils/get-cli-info",
     "@code-robot-cli/utils": "^1.0.3",
     "fs-extra": "^7.0.1",
     "npminstall": "^4.10.0",

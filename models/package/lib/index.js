@@ -1,14 +1,3 @@
-/*
- * @message: 描述
- * @Author: Roy
- * @Email: @163.com
- * @Github: @163.com
- * @Date: 2021-03-04 20:08:57
- * @LastEditors: Roy
- * @LastEditTime: 2021-09-26 15:44:42
- * @Deprecated: 否
- * @FilePath: /code-robot-cli/models/package/lib/index.js
- */
 'use strict';
 
 const path = require('path');
@@ -48,6 +37,7 @@ class Package {
 
         if (this.packageVersion === 'latest') {
             this.packageVersion = await getNpmLatestVersion(this.packageName);
+            console.log("this.packageVersion", this.packageVersion);
         }
         //_@imooc-cli_init@1.1.2@@imooc-cli
         //@imooc-cli/init 1.1.2

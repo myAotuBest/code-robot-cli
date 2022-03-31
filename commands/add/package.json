@@ -29,7 +29,7 @@
   "dependencies": {
     "@code-robot-cli/command": "^1.0.3",
     "@code-robot-cli/log": "^1.0.3",
-    "@code-robot-cli/package": "^1.0.3",
+    "@code-robot-cli/package": "file:../../models/package",
     "@code-robot-cli/utils": "^1.0.3",
     "ejs": "^3.1.6",
     "fs-extra": "^10.0.0",

@@ -3,6 +3,7 @@ const path = require("path");
 const userHome = require("user-home");
 const pathExists = require("path-exists");
 const pkgUp = require("pkg-up");
+const fs = require("fs");
 const fse = require("fs-extra");
 const semver = require("semver");
 const inquirer = require("inquirer");
@@ -64,7 +65,9 @@ class AddCommand extends Command {
         // 3.1 检查目录重名问题
         await this.prepare(ADD_MODE_SECTION);
         // 3.2 代码片段模版下载
-        await this.downloadTemplate(ADD_MODE_SECTION)
+        await this.downloadTemplate(ADD_MODE_SECTION);
+        // 3.3 代码片段安装
+        await this.installSection();
     }
 
     async installPageTemplate() {
@@ -99,6 +102,67 @@ class AddCommand extends Command {
                 },
             ],
         });
+    }
+
+    async installSection() {
+        // 1. 选择要插入的源码文件
+        const files = fs
+            .readdirSync(this.dir, { withFileTypes: true })
+            .map((file) => (file.isFile() ? file.name : null))
+            .filter((_) => _)
+            .map((file) => ({ name: file, value: file }));
+        if (files.length === 0) {
+            throw new Error("当前文件夹下没有文件！");
+        }
+        const codeFile = (
+            await inquirer.prompt({
+                type: "list",
+                message: "请选择要插入代码片段的源码文件",
+                name: "codeFile",
+                choices: files,
+            })
+        ).codeFile;
+        // 2. 需要用户输入插入的行数
+        const lineNumber = (
+            await inquirer.prompt({
+                type: "input",
+                message: "请输入要插入的行数",
+                name: "lineNumber",
+                validate: function (v) {
+                    const done = this.async();
+                    if (!v || !v.trim()) {
+                        done("插入的行数不能为空");
+                        return;
+                    } else if (v >= 0 && Math.floor(v) === Number(v)) {
+                        done(null, true);
+                    } else {
+                        done("插入的行数必须为整数");
+                    }
+                },
+            })
+        ).lineNumber;
+        log.verbose("codeFile:", codeFile);
+        log.verbose("lineNumber:", lineNumber);
+        // 3. 对源码文件进行分割成数组
+        const codeFilePath = path.resolve(this.dir, codeFile);
+        const codeContent = fs.readFileSync(codeFilePath, "utf-8");
+        const codeContentArr = codeContent.split("\n");
+        // 4. 以组件形式插入代码片段
+        const componentNameOriginal = this.sectionTemplate.sectionName
+        const componentName = componentNameOriginal.toLocaleLowerCase();
+        codeContentArr.splice(lineNumber, 0, `<${componentName}></${componentName}>`)
+        // 5. 插入代码片段的 import 语句
+        const scriptIndex = codeContentArr.findIndex(code => code.replace(/\s/g, "") === '<script>')
+        codeContentArr.splice(scriptIndex + 1, 0, `import ${componentNameOriginal} from './components/${componentNameOriginal}/index.vue'`)
+        // 6. 将代码还原成 string
+        const newCodeContent = codeContentArr.join("\n")
+        fs.writeFileSync(codeFilePath, newCodeContent, "utf-8")
+        log.success("代码片段写入成功")
+        // 7. 创建代码片段组件目录
+        fse.ensureDirSync(this.targetPath)
+        const templatePath = path.resolve(this.sectionTemplatePackage.cachFilePath, "template")
+        fse.copySync(templatePath, this.targetPath)
+        log.success("代码片段拷贝成功")
     }
 
     async installTemplate() {
@@ -269,19 +333,24 @@ class AddCommand extends Command {
         if (addMode === ADD_MODE_PAGE) {
             this.targetPath = path.resolve(this.dir, this.pageTemplate.pageName);
         } else {
-            this.targetPath = path.resolve(this.dir, "components", this.sectionTemplate.sectionName);
+            this.targetPath = path.resolve(
+                this.dir,
+                "components",
+                this.sectionTemplate.sectionName
+            );
         }
         if (await pathExists(this.targetPath)) {
             throw new Error("页面文件夹已经存在");
         }
     }
     async downloadTemplate(addMode = ADD_MODE_PAGE) {
-        const name = addMode === ADD_MODE_PAGE ? "页面" : "代码片段"
+        const name = addMode === ADD_MODE_PAGE ? "页面" : "代码片段";
         //缓存文件夹
         const targetPath = path.resolve(userHome, ".code-robot-cli", "template");
         //缓存具体路径
         const storeDir = path.resolve(targetPath, "node_modules");
-        const { npmName, version } = addMode === ADD_MODE_PAGE ? this.pageTemplate : this.sectionTemplate;
+        const { npmName, version } =
+            addMode === ADD_MODE_PAGE ? this.pageTemplate : this.sectionTemplate;
         //构建一个package对象
         const templatePackage = new Package({
             targetPath,
