@@ -30,7 +30,6 @@ class Package {
     }
 
     async prepare() {
-
         if (this.storeDir && !pathExists(this.storeDir)) {
             fse.mkdirpSync(this.storeDir);
         }
@@ -115,9 +114,7 @@ class Package {
         } else {
             return _getRootFile(this.targetPath);
         }
-
     }
-
 }
 
 module.exports = Package;

@@ -41,6 +41,14 @@ code-robot-cli
 
 ![cd](./assets/%E4%BA%91%E6%9E%84%E5%BB%BA.png)
 
+## 模版页面复用
+
+![page](./assets//%E8%84%9A%E6%89%8B%E6%9E%B6%E9%A1%B5%E9%9D%A2%E6%A8%A1%E7%89%88%E5%A4%8D%E7%94%A8/页面模版复用流程图.png)
+
+## 代码片段模版复用
+
+![code](./assets/%E8%84%9A%E6%89%8B%E6%9E%B6%E9%A1%B5%E9%9D%A2%E6%A8%A1%E7%89%88%E5%A4%8D%E7%94%A8/脚手架代码片段复用功能.png)
+
 ## Gitflow
 
 ![gitflow](./assets/%E8%84%9A%E6%89%8B%E6%9E%B6%E5%8F%91%E5%B8%83%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84.png)

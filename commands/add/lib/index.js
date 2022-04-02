@@ -152,8 +152,12 @@ class AddCommand extends Command {
         const componentName = componentNameOriginal.toLocaleLowerCase();
         codeContentArr.splice(lineNumber, 0, `<${componentName}></${componentName}>`)
         // 5. 插入代码片段的 import 语句
-        const scriptIndex = codeContentArr.findIndex(code => code.replace(/\s/g, "") === '<script>')
-        codeContentArr.splice(scriptIndex + 1, 0, `import ${componentNameOriginal} from './components/${componentNameOriginal}/index.vue'`)
+        // vue 需要在 script 插入
+        // const scriptIndex = codeContentArr.findIndex(code => code.replace(/\s/g, "") === '<script>')
+        // codeContentArr.splice(scriptIndex + 1, 0, `import ${componentNameOriginal} from './components/${componentNameOriginal}/index.vue'`)
+
+        // React 组件直接插入就行了
+        codeContentArr.splice(1, 0, `import ${componentNameOriginal} from './components/${componentNameOriginal}'`)
         // 6. 将代码还原成 string
         const newCodeContent = codeContentArr.join("\n")
         fs.writeFileSync(codeFilePath, newCodeContent, "utf-8")

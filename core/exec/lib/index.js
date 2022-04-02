@@ -1,15 +1,3 @@
-
-/*
- * @message: 描述
- * @Author: Roy
- * @Email: @163.com
- * @Github: @163.com
- * @Date: 2021-03-04 18:25:02
- * @LastEditors: Roy
- * @LastEditTime: 2022-02-20 16:19:15
- * @Deprecated: 否
- * @FilePath: /code-robot-cli/core/exec/lib/index.js
- */
 'use strict';
 
 const path = require('path');
@@ -26,6 +14,11 @@ const SETTINGS = {
 const CACHE_DIR = 'dependencies/';
 
 async function exec() {
+    //1.targetPath -> modulePath
+    //2.modulePath -> Package(npm模块)
+    //3.Package.getRootFile(获取入口文件)
+    //4.Package.update/Package.install
+
     let targetPath = process.env.CLI_TARGET_PATH;
     const homePath = process.env.CLI_HOME_PATH;
     let storeDir = '';
@@ -93,16 +86,7 @@ async function exec() {
         } catch (e) {
             log.error(e.message);
         }
-
     }
-
-
-    //1.targetPath -> modulePath
-    //2.modulePath -> Package(npm模块)
-    //3.Package.getRootFile(获取入口文件)
-    //4.Package.update/Package.install
-
-
 }
 
 module.exports = exec;
