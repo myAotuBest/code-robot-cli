@@ -1,6 +1,6 @@
 {
   "name": "@code-robot-cli/git",
-  "version": "1.0.3",
+  "version": "1.0.1",
   "description": "> TODO: description",
   "author": "徐聪 <admin@example.com>",
   "homepage": "https://github.com/myAotuBest/code-robot-cli#readme",
@@ -28,10 +28,10 @@
     "url": "https://github.com/myAotuBest/code-robot-cli/issues"
   },
   "dependencies": {
-    "@code-robot-cli/cloudbuild": "^1.0.3",
-    "@code-robot-cli/log": "^1.0.3",
-    "@code-robot-cli/request": "^1.0.3",
-    "@code-robot-cli/utils": "^1.0.3",
+    "@code-robot-cli/cloudbuild": "^1.0.1",
+    "@code-robot-cli/log": "^1.0.1",
+    "@code-robot-cli/request": "^1.0.1",
+    "@code-robot-cli/utils": "^1.0.1",
     "axios": "^0.21.1",
     "fs-extra": "^10.0.0",
     "inquirer": "^8.1.1",

@@ -11,8 +11,9 @@ const glob = require("glob");
 const ejs = require("ejs");
 const Command = require("@code-robot-cli/command");
 const Package = require("@code-robot-cli/package");
+const request = require("@code-robot-cli/request")
 const log = require("@code-robot-cli/log");
-const { sleep, spinnerStart } = require("@code-robot-cli/utils");
+const { sleep, spinnerStart, execAsync } = require("@code-robot-cli/utils");
 
 const PAGE_TEMPLATE = [
     {
@@ -29,11 +30,22 @@ const SECTION_TEMPLATE = [
         name: "React代码片段",
         npmName: "@aotu-cli/template-section",
         version: "latest",
+        targetPath: ''
+    },
+    {
+        name: "Vue3代码片段",
+        npmName: "robot-cli-template-section-vue3",
+        version: "latest",
+        targetPath: "src/",
+        ignore: ["assets/**"],
     },
 ];
 
 const ADD_MODE_SECTION = "section";
 const ADD_MODE_PAGE = "page";
+
+const TYPE_CUSTOM = "custom";
+const TYPE_NORMAL = 'normal'
 
 process.on("unhandledRejection", (e) => { });
 
@@ -42,6 +54,21 @@ class AddCommand extends Command {
         console.log("执行初始化命令");
         //获取add命令的初始化参数
     }
+
+    getPageTemplate() {
+        return request({
+            url: "/page/template",
+            method: "get"
+        })
+    }
+
+    getSectionTemplate() {
+        return request({
+            url: "/section/template",
+            method: "get"
+        })
+    }
+
     async exec() {
         // 代码片段（区块）：以源码形式拷贝的 react 组件
         // 1. 选择复用方式
@@ -164,7 +191,7 @@ class AddCommand extends Command {
         log.success("代码片段写入成功")
         // 7. 创建代码片段组件目录
         fse.ensureDirSync(this.targetPath)
-        const templatePath = path.resolve(this.sectionTemplatePackage.cachFilePath, "template")
+        const templatePath = path.resolve(this.sectionTemplatePackage.cachFilePath, "template", this.sectionTemplate.targetPath)
         fse.copySync(templatePath, this.targetPath)
         log.success("代码片段拷贝成功")
     }
@@ -188,11 +215,40 @@ class AddCommand extends Command {
         log.verbose("targetPath", targetPath);
         fse.ensureDirSync(templatePath);
         fse.ensureDirSync(targetPath);
+        if (this.pageTemplate.type === TYPE_CUSTOM) {
+            await this.installCustomPageTemplate({ templatePath, targetPath })
+        } else {
+            await this.installNormalPageTemplate({ templatePath, targetPath })
+        }
+    }
+
+    async installCustomPageTemplate({ templatePath, targetPath }) {
+        // 获取自定义模版的入口文件
+        const rootFile = this.pageTemplatePackage.getRootFile()
+        if (fs.existsSync(rootFile)) {
+            log.notice("开始执行自定义模版")
+            const options = {
+                templatePath,
+                targetPath
+            }
+            const code = `require(${rootFile})(${JSON.stringify(options)})`
+            await execAsync('node', ['-e', code], {
+                stdio: 'inherit',
+                cwd: process.cwd()
+            })
+            log.success("自定义模版安装成功!");
+        } else {
+            throw new Error("自定义模版入口不存在")
+        }
+    }
+
+    async installNormalPageTemplate({ templatePath, targetPath }) {
         fse.copySync(templatePath, targetPath);
         await this.ejsRender({ targetPath });
         await this.dependenciesMerge({ templatePath, targetPath });
         log.success("安装页面模板成功");
     }
+
     async ejsRender(options) {
         const { targetPath } = options;
         const pageTemplate = this.pageTemplate;
@@ -405,8 +461,14 @@ class AddCommand extends Command {
     }
     async getTemplate(addMode = ADD_MODE_PAGE) {
         const name = addMode === ADD_MODE_PAGE ? "页面" : "代码片段";
+        // 通过API获取页面模版列表
+        if (addMode === ADD_MODE_PAGE) {
+            this.pageTemplateData = await this.getPageTemplate()
+        } else {
+            this.sectionTemplateData = await this.getSectionTemplate()
+        }
         const template =
-            addMode === ADD_MODE_PAGE ? PAGE_TEMPLATE : SECTION_TEMPLATE;
+            addMode === ADD_MODE_PAGE ? this.pageTemplateData : this.sectionTemplateData;
         const pageTemplateName = (
             await inquirer.prompt({
                 type: "list",
@@ -445,7 +507,7 @@ class AddCommand extends Command {
     }
     createChoices(addMode) {
         const template =
-            addMode == ADD_MODE_PAGE ? PAGE_TEMPLATE : SECTION_TEMPLATE;
+            addMode == ADD_MODE_PAGE ? this.pageTemplateData : this.sectionTemplateData;
         return template.map((item) => ({
             name: item.name,
             value: item.npmName,
